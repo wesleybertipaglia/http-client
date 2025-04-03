@@ -31,7 +31,7 @@ I have also added an example using the @Google Book API to demonstrate how to us
 
 1. Clone the repository
 ```bash
-git clone 
+git clone https://github.com/wesleybertipaglia/http-client.git
 ```
 
 2. Navigate to the project directory
