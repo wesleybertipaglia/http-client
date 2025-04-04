@@ -1,14 +1,10 @@
-package com.wesleybertipaglia.helpers;
+package com.wesleybertipaglia.views;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Scanner;
-import java.util.UUID;
 
 import com.wesleybertipaglia.controllers.BookController;
+import com.wesleybertipaglia.helpers.FileHelper;
 import com.wesleybertipaglia.models.Book;
 import org.json.JSONArray;
 
