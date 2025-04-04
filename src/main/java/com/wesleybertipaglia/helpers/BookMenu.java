@@ -1,5 +1,6 @@
-package com.wesleybertipaglia.menu;
+package com.wesleybertipaglia.helpers;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -71,19 +72,10 @@ public class BookMenu {
             System.out.println("\n⚠️ No results to save.");
             return;
         }
-        String fileName = getFileName();
-        try (FileWriter fileWriter = new FileWriter(fileName)) {
-            fileWriter.write(new JSONArray(lastResult).toString());
-            System.out.println("\n✅ Results saved successfully as " + fileName);
-        } catch (Exception e) {
-            System.out.println("\n❌ Error saving file: " + e.getMessage());
-        }
-    }
 
-    private static String getFileName() {
-        String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss"));
-        String uuid = UUID.randomUUID().toString().substring(0, 8);
-        return "result-" + timestamp + "-" + uuid + ".json";
+        String fileName = "result-" + FileHelper.getRandomFileName();
+        String file = new JSONArray(lastResult).toString();
+        FileHelper.saveFile(fileName, file);
     }
 
     private static void exitProgram() {

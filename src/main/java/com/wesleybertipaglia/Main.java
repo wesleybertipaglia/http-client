@@ -1,6 +1,6 @@
 package com.wesleybertipaglia;
 
-import com.wesleybertipaglia.menu.BookMenu;
+import com.wesleybertipaglia.helpers.BookMenu;
 
 public class Main {
     public static void main(String[] args) {
